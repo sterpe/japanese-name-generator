@@ -16,10 +16,6 @@
     "url": "https://github.com/sterpe/japanese-name-generator/issues"
   },
   "homepage": "https://github.com/sterpe/japanese-name-generator#readme",
-  "config": {
-    "src": "src/",
-    "dist": "dist/"
-  },
   "standard": {
     "ignore": [
       "dist/"

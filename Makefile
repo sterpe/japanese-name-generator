@@ -1,6 +1,7 @@
 NODE_MODULES=node_modules
 PATH:=$(NODE_MODULES)/.bin:$(PATH)
 PACKAGE_NAME=$(shell node -p "require('./package.json').name" 2>/dev/null)
+EXT=js
 BAFLAGS=--source-maps true
 BRFLAGS=-p bundle-collapser/plugin \
 	-s $(PACKAGE_NAME) \
@@ -18,7 +19,7 @@ babel: | scrub $(DIST)/
 browserify: | scrub $(DIST)/
 	@browserify $(BRFLAGS) \
 		$(ROOT) \
-		| derequire > $(DIST)/$(PACKAGE_NAME).js;
+		| derequire > $(DIST)/$(PACKAGE_NAME).$(EXT);
 build: babel browserify
 clean:
 	@rm -rf $(COVERAGE) $(REPORTS);

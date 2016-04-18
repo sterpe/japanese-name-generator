@@ -30,8 +30,7 @@ jest: | clean $(REPORTS)/
 $(REPORTS)/:
 	@mkdir -p $(REPORTS);
 lint: standard
-$(NODE_MODULES)/: npm
-npm:
+$(NODE_MODULES)/:
 	@npm i;
 standard:
 	@standard;
@@ -44,7 +43,6 @@ test: lint jest
 	clean \
 	jest \
 	lint \
-	npm \
 	scrub \
 	standard \
 	test

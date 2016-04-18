@@ -1,0 +1,5 @@
+{
+  "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+  "setupTestFrameworkScriptFile": "<rootDir>/scripts/testsetup.js",
+  "testRunner": "jasmine1"
+}

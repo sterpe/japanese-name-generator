@@ -16,7 +16,7 @@ babel: | scrub dist/
 browserify: | scrub dist/
 	@browserify $(BRFLAGS) \
 		$(SRC)/index.js \
-		| derequire > $(DIST)/$(PACKAGE_NAME).js
+		| derequire > $(DIST)/$(PACKAGE_NAME).js;
 build: babel browserify
 clean:
 	@rm -rf $(COVERAGE) $(REPORTS);
@@ -27,7 +27,7 @@ dist/:
 jest: | clean $(REPORTS)
 	@jest -c .jestrc $(JFLAGS);
 $(REPORTS):
-	@mkdir -p $(REPORTS)
+	@mkdir -p $(REPORTS);
 lint: standard
 node_modules/: npm
 npm:

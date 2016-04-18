@@ -1,4 +1,5 @@
-PATH:=node_modules/.bin:$(PATH)
+NODE_MODULES=node_modules
+PATH:=$(NODE_MODULES)/.bin:$(PATH)
 PACKAGE_NAME=$(shell node -p "require('./package.json').name" 2>/dev/null)
 BAFLAGS=--source-maps true
 BRFLAGS=-p bundle-collapser/plugin \
@@ -10,10 +11,10 @@ SRC=src
 COVERAGE=coverage
 REPORTS=test-reports
 
-all: node_modules/ test build
-babel: | scrub dist/
+all: $(NODE_MODULES)/ test build
+babel: | scrub $(DIST)/
 	@babel $(BAFLAGS) -d $(DIST) $(SRC);
-browserify: | scrub dist/
+browserify: | scrub $(DIST)/
 	@browserify $(BRFLAGS) \
 		$(SRC)/index.js \
 		| derequire > $(DIST)/$(PACKAGE_NAME).js;
@@ -22,14 +23,14 @@ clean:
 	@rm -rf $(COVERAGE) $(REPORTS);
 scrub:
 	@rm -rf $(DIST);
-dist/:
+$(DIST)/:
 	@mkdir -p $(DIST);
-jest: | clean $(REPORTS)
+jest: | clean $(REPORTS)/
 	@jest -c .jestrc $(JFLAGS);
-$(REPORTS):
+$(REPORTS)/:
 	@mkdir -p $(REPORTS);
 lint: standard
-node_modules/: npm
+$(NODE_MODULES)/: npm
 npm:
 	@npm i;
 standard:

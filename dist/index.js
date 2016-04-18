@@ -10,11 +10,12 @@ function randomOf(array) {
   return array[Random.integer(0, array.length - 1)(mt)];
 }
 
-module.exports = function (options) {
+module.exports = function () {
+  var options = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
   var gender = ['male', 'female'];
   var name = [];
 
-  options = options || {};
   options.gender = options.gender || randomOf(gender);
 
   name.push(randomOf(japaneseSurnames));

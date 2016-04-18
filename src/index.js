@@ -9,11 +9,10 @@ function randomOf (array) {
   return array[Random.integer(0, array.length - 1)(mt)]
 }
 
-module.exports = function (options) {
+module.exports = function (options = {}) {
   const gender = ['male', 'female']
   const name = []
 
-  options = options || {}
   options.gender = options.gender || randomOf(gender)
 
   name.push(randomOf(japaneseSurnames))

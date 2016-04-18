@@ -8,6 +8,7 @@ BRFLAGS=-p bundle-collapser/plugin \
 JFLAGS=--coverage
 DIST=dist
 SRC=src
+ROOT=$(SRC)/index.js
 COVERAGE=coverage
 REPORTS=test-reports
 
@@ -16,7 +17,7 @@ babel: | scrub $(DIST)/
 	@babel $(BAFLAGS) -d $(DIST) $(SRC);
 browserify: | scrub $(DIST)/
 	@browserify $(BRFLAGS) \
-		$(SRC)/index.js \
+		$(ROOT) \
 		| derequire > $(DIST)/$(PACKAGE_NAME).js;
 build: babel browserify
 clean:

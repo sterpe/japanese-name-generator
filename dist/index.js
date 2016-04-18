@@ -21,9 +21,9 @@ module.exports = function (options) {
   name.push(options.gender === 'male' ? randomOf(maleJapaneseNames) : randomOf(femaleJapaneseNames));
   return {
     gender: options.gender,
-    name: name[1],
+    name: name.join(' '),
     surname: name[0],
-    fullName: name.join(' ')
+    firstName: name[1]
   };
 };
 //# sourceMappingURL=index.js.map

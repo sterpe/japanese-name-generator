@@ -33,3 +33,6 @@ Run the unit tests with `make`.
 ```
 make test
 ```
+
+## license
+`MIT`

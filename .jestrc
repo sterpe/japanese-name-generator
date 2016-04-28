@@ -1,5 +1,9 @@
 {
   "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
   "setupTestFrameworkScriptFile": "<rootDir>/scripts/testsetup.js",
+  "collectCoverage": true,
+  "collectCoverageOnlyFrom": {
+    "<rootDir>/src/index.js": true
+  },
   "testRunner": "jasmine1"
 }

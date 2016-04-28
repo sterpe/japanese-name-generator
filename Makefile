@@ -15,9 +15,9 @@ REPORTS=test-reports
 
 all: $(NODE_MODULES)/ test build
 babel: | scrub $(DIST)/
-	@babel $(BAFLAGS) -d $(DIST) $(SRC);
+	babel $(BAFLAGS) -d $(DIST) $(SRC);
 browserify: | scrub $(DIST)/
-	@browserify $(BRFLAGS) \
+	browserify $(BRFLAGS) \
 		$(ROOT) \
 		| derequire > $(DIST)/$(PACKAGE_NAME).$(EXT);
 build: babel browserify

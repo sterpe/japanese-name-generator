@@ -19,7 +19,9 @@ module.exports = function () {
   options.gender = options.gender || randomOf(gender);
 
   name.push(randomOf(japaneseSurnames));
+
   name.push(options.gender === 'male' ? randomOf(maleJapaneseNames) : randomOf(femaleJapaneseNames));
+
   return {
     gender: options.gender,
     name: name.join(' '),

@@ -6,7 +6,7 @@
 
 ## installation
 ```
-npm i --S japanese-name-generator
+npm install --save japanese-name-generator
 ```
 
 ## usage

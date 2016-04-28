@@ -1,8 +1,8 @@
 # japanese-name-generator
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
 ![Japanese Name Generator](http://nd06.jxs.cz/033/857/642dda4c84_95676290_o2.jpg)
+
+[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
 ## installation
 ```

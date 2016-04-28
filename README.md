@@ -20,7 +20,9 @@ japanesePerson.name // 'Matsushima Rinako'
 japanesePerson.surname // 'Matsushima'
 japanesePerson.firstName // 'Rinako'
 
-// Alternately, you may specify the gender, ('male' | 'female') as an option:
+// Gender is random but you may, alternately, generate names of a
+// specific gender by passing `options.gender' as either 
+// `male' or `female':
 
 var japaneseMan = generate({ gender: 'male' })
 ```

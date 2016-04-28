@@ -35,4 +35,4 @@ make test
 ```
 
 ## license
-`MIT`
+MIT

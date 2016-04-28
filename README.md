@@ -9,7 +9,7 @@
 npm i --S japanese-name-generator
 ```
 
-## Usage
+## usage
 ```javascript
 var generate = require('japanese-name-generator')
 
@@ -25,7 +25,7 @@ japanesePerson.firstName // 'Rinako'
 var japaneseMan = generate({ gender: 'male' })
 ```
 
-## Tests
+## tests
 Run the unit tests with `make`.
 ```
 make test

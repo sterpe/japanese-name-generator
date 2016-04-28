@@ -2,7 +2,7 @@
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
-![Japanese Name Generator](http://drrichswier.com/wp-content/uploads/japanese-people-1030x641.jpg)
+![Japanese Name Generator](http://nd06.jxs.cz/033/857/642dda4c84_95676290_o2.jpg)
 
 ## installation
 ```

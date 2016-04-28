@@ -24,7 +24,8 @@ japanesePerson.firstName // 'Rinako'
 // specific gender by passing `options.gender' as either 
 // `male' or `female':
 
-var japaneseMan = generate({ gender: 'male' })
+var japaneseMale = generate({ gender: 'male' })
+var japaneseFemale = generate({ gender: 'female' })
 ```
 
 ## tests

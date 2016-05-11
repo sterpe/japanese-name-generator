@@ -28,6 +28,14 @@ var japaneseMale = generate({ gender: 'male' })
 var japaneseFemale = generate({ gender: 'female' })
 ```
 
+### cli
+
+```
+$ npm install -g japanese-name-generator
+$ japanese-name-generator -g female
+Matsushima Rinako
+```
+
 ## tests
 Run the unit tests with `make`.
 ```

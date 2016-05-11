@@ -30,7 +30,7 @@ var japaneseFemale = generate({ gender: 'female' })
 
 ### cli
 
-```
+```bash
 $ npm install -g japanese-name-generator
 $ japanese-name-generator -g female
 Matsushima Rinako
